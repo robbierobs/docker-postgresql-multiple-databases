@@ -1,0 +1,24 @@
+version: '3'
+
+volumes:
+  postgres:
+
+services:
+    postgresql:
+        restart: always
+        image: irobbierobinson/multi-postgres:latest
+        volumes:
+            - ./pg-db-data:/bitnami/postgresql
+        environment:
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_DB=postgres
+            - POSTGRES_MULTIPLE_DATABASES=keycloak,bpm
+        ports:
+            - 5432:5432
+        networks:
+            - backend
+networks:
+    backend:
+        driver: bridge
+
