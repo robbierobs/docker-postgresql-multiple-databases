@@ -4,16 +4,16 @@ volumes:
   postgres:
 
 services:
-    postgresql:
+    postgres:
         restart: always
-        image: irobbierobinson/multi-postgres:latest
+        image: irobbierobinson/multi-db-postgres:latest
         volumes:
-            - ./pg-db-data:/bitnami/postgresql
+            - ./pg-db-data:/var/lib/postgresql/data
         environment:
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_DB=postgres
-            - POSTGRES_ADDITIONAL_DATABASES=keycloak,flow-bpm
+            - POSTGRES_ADDITIONAL_DATABASES=db,keycloak
         ports:
             - 5432:5432
         networks:
