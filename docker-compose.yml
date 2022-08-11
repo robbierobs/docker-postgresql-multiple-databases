@@ -7,6 +7,9 @@ services:
     postgres:
         restart: always
         image: irobbierobinson/multi-db-postgres:latest
+        build:
+          context: ./
+          dockerfile: Dockerfile
         volumes:
             - ./pg-db-data:/var/lib/postgresql/data
         environment:
@@ -15,7 +18,7 @@ services:
             - POSTGRES_DB=postgres
             - POSTGRES_ADDITIONAL_DATABASES=db,keycloak
         ports:
-            - 5432:5432
+            - 5434:5432
         networks:
             - backend
 networks:

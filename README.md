@@ -1,10 +1,10 @@
-# Using multiple databases with the official PostgreSQL Docker image
-
 A PostgreSQL docker build that allows the creation of multiple databases in one container
 
 This build uses a script to create additional databases and grants all privileges to the databases to the admin user.
 
-## Usage
+This is built on top of the offical PostgreSQL image
+
+## docker-compose.yml
 
     postgres:
         restart: always
