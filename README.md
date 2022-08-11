@@ -23,8 +23,7 @@ This build uses a script to create additional databases and grants all privilege
 
 ## Environment Variables
 
-`POSTGRES_PASSWORD` - Admin Password (default: postgres)
-`POSTGRES_USER` - Admin Username (default: postgres)
-`POSTGRES_DB` - Default Postgresql DB Name (default: postgres)
-`POSTGRES_ADDITIONAL_DATABASES` - Additional databases that will be created alongside the default (separated by commas).
-
+* `POSTGRES_PASSWORD` - Admin Password (default: postgres)
+* `POSTGRES_USER` - Admin Username (default: postgres)
+* `POSTGRES_DB` - Default Postgresql DB Name (default: postgres)
+* `POSTGRES_ADDITIONAL_DATABASES` - Additional databases that will be created alongside the default (separated by commas).
