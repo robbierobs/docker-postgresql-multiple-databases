@@ -18,7 +18,7 @@ services:
             - POSTGRES_DB=postgres
             - POSTGRES_ADDITIONAL_DATABASES=db,keycloak
         ports:
-            - 5434:5432
+            - 5432:5432
         networks:
             - backend
 networks:
